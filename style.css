@@ -483,7 +483,7 @@ button {
   cursor: pointer;
 }
 
-#clock {
+#buttons {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -534,4 +534,50 @@ button {
   flex-direction: column;
 
   background-color: var(--bgColor);
+}
+
+/* 반응형 미디어쿼리 */
+
+@media (max-width: 520px) {
+  .popup {
+    /* width: 500px; */
+    width: 350px;
+  }
+
+  #sec {
+    width: 220px;
+  }
+}
+
+@media (max-width: 400px) {
+  #buttons {
+    /* flex-direction: column; */
+    /* align-content: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  #timerButton {
+    width: 150px;
+  }
+
+  #reset {
+    width: 150px;
+  }
+
+  .popup {
+    /* width: 500px; */
+    width: 350px;
+  }
+
+  #speech {
+    margin-bottom: 570px;
+  }
+
+  #sec {
+    width: 220px;
+  }
 }
