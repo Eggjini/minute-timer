@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#ec4945" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- toastr css 라이브러리 -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
+    <title id="title">[Beta] minutes Timer</title>
+  </head>
+  <body>
+    <div id="speech">
+      <div class="balloon top"><span>시간 설정</span></div>
+    </div>
+    <!--end speeech-->
+    <div id="content">
+      <div id="text" style="margin-bottom: -25px;">
+        <span id="minutes">3</span> <span>minutes Timer</span>
+      </div>
+      <!--end text-->
+
+      <!--modal pop-up-->
+      <div class="background">
+        <div class="window">
+          <div class="popup">
+            <button id="close">팝업닫기</button>
+            <form>
+              <div class="select">
+                <input id="hour" type="number" placeholder="시간" />
+                <input id="min" type="number" placeholder="분" />
+                <input id="sec" type="number" placeholder="초" />
+              </div>
+              <!--end select-->
+              <br />
+              <br />
+              <div id="colorBox">
+                <div id="clColor">
+                  <span class="popupText">시계 색상</span>
+                  <div class="cp_wrapper">
+                    <input id="clockColor" type="color" value="#ff6e6e" />
+                  </div>
+                  <!--end cp_wrapper-->
+                </div>
+                <!--end clColor-->
+                <div id="bgColor">
+                  <span class="popupText">배경 색상</span>
+                  <div class="cp_wrapper">
+                    <input id="backColor" type="color" value="#c5e1ff" />
+                  </div>
+                  <!--end cp_wrapper-->
+                </div>
+                <!--end bgColor-->
+              </div>
+              <!--end colorBox-->
+              <!--end cp_wrapper-->
+              <div class="wrapper">
+                <input type="reset" id="formReset" value="기본값" />
+                <button type="button" id="submit">적용</button>
+              </div>
+              <!--end wrapper-->
+            </form>
+          </div>
+          <!--end popup-->
+        </div>
+        <!--end window-->
+      </div>
+      <!--end background-->
+      <div id="clock">
+        <button id="timerButton" class="start">시작</button>
+        <button id="reset">초기화</button>
+
+        <div class="clockBox">
+          <div id="timer">
+            <div id="mask"></div>
+            <!--end mask-->
+          </div>
+          <!--end timer-->
+        </div>
+        <!--end clockBox-->
+      </div>
+      <!--end clock-->
+    </div>
+    <!--end content-->
+    <!--<button id="fullButton">전체화면</button>-->
+
+    <div class="toast">Error</div>
+    <script src="script.js"></script>
+    <!-- toastr js 라이브러리 -->
+    <script
+      type="text/javascript"
+      src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    ></script>
+  </body>
+</html>
