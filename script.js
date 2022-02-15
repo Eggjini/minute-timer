@@ -13,7 +13,7 @@ function close() {
   document.querySelector(".background").className = "background";
 }
 
-document.querySelector("#text").addEventListener("click", show);
+document.querySelector("#f5Text").addEventListener("click", show);
 document.querySelector("#close").addEventListener("click", close);
 //end modal function
 
@@ -72,11 +72,24 @@ function start() {
 
 document.querySelector("#timerButton").addEventListener("click", start);
 
-function reset() {
-  window.location.reload();
+// function reset() {
+//   window.location.reload();
+// }
+
+//[f5] div 만 새로고침 fn
+function f5() {
+  document.getElementById("f5").innerHTML = document.getElementById(
+    "f5"
+  ).innerHTML;
+
+  document.getElementById("f5Text").innerHTML = document.getElementById(
+    "f5Text"
+  ).innerHTML;
+
+  stopTimer();
 }
 
-document.querySelector("#reset").addEventListener("click", reset);
+document.querySelector("#reset").addEventListener("click", f5);
 
 var elem = document.getElementById("content");
 function openFullscreen() {
