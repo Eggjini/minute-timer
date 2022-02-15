@@ -3,13 +3,13 @@
 ## 미리보기 사진 (Preview)
 |기본 (default)|작동중 (running)|색상 변경 (color changed)|팝업창 (modal)|
 |---|---|---|---|
-|![image](https://user-images.githubusercontent.com/87926758/153971077-6d66166e-0144-4255-9a56-6052f483cb84.png)|![image](https://user-images.githubusercontent.com/87926758/153970513-ba24e0e0-99d8-4fe2-8450-24b9378fb12e.png)|![image](https://user-images.githubusercontent.com/87926758/153971223-6ddfb3f7-bda9-472a-a4e0-af72bd6d6e17.png)|![image](https://user-images.githubusercontent.com/87926758/153971253-a6791386-ec78-40b7-8f7b-f090e8df3413.png)|
+|![image](https://user-images.githubusercontent.com/87926758/153971077-6d66166e-0144-4255-9a56-6052f483cb84.png)|![image](https://user-images.githubusercontent.com/87926758/153970513-ba24e0e0-99d8-4fe2-8450-24b9378fb12e.png)|![image](https://user-images.githubusercontent.com/87926758/153971223-6ddfb3f7-bda9-472a-a4e0-af72bd6d6e17.png)|![image](https://user-images.githubusercontent.com/87926758/154168334-8f935b2f-6d7d-4e1d-821e-e2d3f7c4aba7.png)|
 
 ## 사용 방법 (How to use?)
 ### ⌚시간 설정하기
 |1|2|3|
 |:---:|:---:|:---:|
-|![image](https://user-images.githubusercontent.com/87926758/153972174-47dc5c4b-0658-4d0f-b866-fbdb0937cb6e.png) 상단 회색 글씨 클릭|![image](https://user-images.githubusercontent.com/87926758/153972376-aa1823a4-b05a-41fd-8f67-3b863a9b45c7.png)시간 설정|![image](https://user-images.githubusercontent.com/87926758/153972400-2ee59466-7432-4d35-b289-df258821183a.png) "적용" 클릭|
+|![image](https://user-images.githubusercontent.com/87926758/153972174-47dc5c4b-0658-4d0f-b866-fbdb0937cb6e.png) 상단 회색 글씨 클릭|![image](https://user-images.githubusercontent.com/87926758/154168392-2581a3f8-0e2a-4da4-b01e-e619794c69d8.png)시간 설정|![image](https://user-images.githubusercontent.com/87926758/153972400-2ee59466-7432-4d35-b289-df258821183a.png) "적용" 클릭|
 
 ### 🎨색상 변경하기
 |1|2|3|
