@@ -20,16 +20,19 @@
     </div>
     <!--end speeech-->
     <div id="content">
-      <div id="text" style="margin-bottom: -25px;">
-        <span id="minutes">3</span> <span>minutes Timer</span>
+      <div id="f5Text">
+        <div id="text" style="margin-bottom: -25px;">
+          <span id="minutes">3</span> <span> minutes Timer</span>
+        </div>
+        <!--end text-->
       </div>
-      <!--end text-->
+      <!--end f5Text-->
 
       <!--modal pop-up-->
       <div class="background">
         <div class="window">
           <div class="popup">
-            <button id="close">팝업닫기</button>
+            <button id="close">X</button>
             <form>
               <div class="select">
                 <input id="hour" type="number" placeholder="시간" />
@@ -77,7 +80,7 @@
           <button id="reset">초기화</button>
         </div>
         <!--end buttons-->
-        <div class="clockBox">
+        <div class="clockBox" id="f5">
           <div id="timer">
             <div id="mask"></div>
             <!--end mask-->

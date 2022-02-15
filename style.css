@@ -4,9 +4,19 @@
   --timerTime: 180s;
 }
 
+/*폰트 인클루드*/
+
 @font-face {
   font-family: "ROKAFSlabSerifBold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSlabSerifBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cafe24Ohsquareair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -48,7 +58,7 @@ body {
   animation-name: text;
   animation-duration: var(--timerTime);
   animation-play-state: paused;
-  animation-iteration-count: 0.99999;
+  animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 
   cursor: pointer;
@@ -107,7 +117,7 @@ body {
   animation-duration: var(--timerTime);
   animation-timing-function: linear;
   animation-play-state: paused;
-  animation-iteration-count: 0.99999;
+  animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
 #mask {
@@ -122,7 +132,7 @@ body {
   animation-duration: var(--timerTime);
   animation-timing-function: linear;
   animation-play-state: paused;
-  animation-iteration-count: 0.99999;
+  animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 
   transform-origin: 100% 50%;
@@ -213,6 +223,8 @@ input[type="color"] {
   width: 150%;
   height: 150%;
   margin: -25%;
+
+  cursor: pointer;
 }
 
 .cp_wrapper {
@@ -535,6 +547,26 @@ button {
 
   background-color: var(--bgColor);
 }
+
+#close {
+  /* New added property */
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--clockColor);
+  color: var(--clockColor);
+}
+
+#close:hover {
+  color: white;
+  background-color: #e56262;
+}
+
+.popupText {
+  font-family: "Cafe24Ohsquareair";
+}
+
 
 /* 반응형 미디어쿼리 */
 
