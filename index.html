@@ -13,6 +13,7 @@
       type="text/css"
       href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
     />
+    <link rel="shortcut icon" href="./images/favicon.ico">
     <title id="title">Minute Timer</title>
   </head>
   <body>
@@ -28,7 +29,7 @@
         <!--end text-->
       </div>
       <!--end f5Text-->
-
+ 
       <!--modal pop-up-->
       <div class="background">
         <div class="window">
@@ -75,26 +76,27 @@
         <!--end window-->
       </div>
       <!--end background-->
-      <div id="zoomContents">
+      <div class="zoomContents">
         <div id="buttons">
           <button id="timerButton" class="start">시작</button>
           <button id="reset">초기화</button>
         </div>
         <!--end buttons-->
-        <div class="clockBox" id="f5">
-          <div id="timer">
-            <div id="mask"></div>
-            <!--end mask-->
-          </div>
-          <!--end timer-->
+        <div class="clockBox">
+            <div id="f5">
+                <div id="timer">
+                    <div id="mask"></div>
+                    <!--end mask-->
+                </div>
+                <!--end timer-->
+            </div>
         </div>
-        <!--end clockBox-->
+        <!--end clockBox, #f5-->
       </div>
       <!--end zoomContents-->
     </div>
     <!--end content-->
     <!--<button id="fullButton">전체화면</button>-->
-
     <div class="toast">Error</div>
     <script src="script.js"></script>
     <!-- toastr js 라이브러리 -->
@@ -102,5 +104,9 @@
       type="text/javascript"
       src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
     ></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
   </body>
 </html>

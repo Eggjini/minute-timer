@@ -18,6 +18,7 @@ document.querySelector("#close").addEventListener("click", close);
 //end modal function
 
 var total;
+var forCount;
 
 function setTime() {
   var hour = document.getElementById("hour").value;
@@ -25,6 +26,7 @@ function setTime() {
   var sec = document.getElementById("sec").value;
 
   total = hour * 3600 + min * 60 + sec * 1;
+  forCount = total;
   total = total + "s";
   var realMin = hour * 60 + min * 1;
 
@@ -56,7 +58,7 @@ function hide() {
   document.getElementById("speech").style.visibility = "hidden";
 }
 
-document.getElementById("text").addEventListener("click", hide);
+document.getElementById("f5Text").addEventListener("click", hide);
 document.getElementById("submit").addEventListener("click", setTime);
 document.getElementById("submit").addEventListener("click", setColor);
 
@@ -70,54 +72,69 @@ function start() {
   }
 }
 
-document.querySelector("#timerButton").addEventListener("click", start);
-
-// function reset() {
-//   window.location.reload();
-// }
-
 //[f5] div 만 새로고침 fn
 function f5() {
-  document.getElementById("f5").innerHTML = document.getElementById(
-    "f5"
-  ).innerHTML;
+    stopTimer();
+    document.getElementById("f5").innerHTML = document.getElementById(
+      "f5"
+    ).innerHTML;
+}
 
-  document.getElementById("f5Text").innerHTML = document.getElementById(
+
+function f5Text() {
+    document.getElementById("f5Text").innerHTML = document.getElementById(
     "f5Text"
-  ).innerHTML;
-
-  stopTimer();
+    ).innerHTML;
 }
 
 document.querySelector("#reset").addEventListener("click", f5);
+document.querySelector("#reset").addEventListener("click", f5Text);
 
-var elem = document.getElementById("content");
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
-  }
+document.querySelector("#timerButton").addEventListener("click", start);
+
+document.querySelector("#text").addEventListener("animationiteration", function() {
+    Swal.fire({
+        title: '시간 초과',
+        showDenyButton: false,
+        showCancelButton: false,
+        confirmButtonText: '확인',
+        icon: "warning"
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          reset();
+        } 
+      })
+
+    f5();
+    f5Text();
+});
+
+
+function reset() {
+  window.location.reload();
 }
 
-document.querySelector("#fullButton").addEventListener("click", openFullscreen);
-
 function startTimer() {
+
   document.getElementById("timerButton").className = "stop";
   document.getElementById("timerButton").innerHTML = "정지";
   document.getElementById("timer").style.animationPlayState = "running";
   document.getElementById("mask").style.animationPlayState = "running";
   document.getElementById("text").style.animationPlayState = "running";
   condition = "running";
+
+  document.body.style.setProperty("--grPercent", "50%");
 }
 
 function stopTimer() {
+
   document.getElementById("timerButton").className = "start";
   document.getElementById("timerButton").innerHTML = "시작";
   document.getElementById("timer").style.animationPlayState = "paused";
   document.getElementById("mask").style.animationPlayState = "paused";
   document.getElementById("text").style.animationPlayState = "paused";
   condition = "paused";
+
+  document.body.style.setProperty("--grPercent", "50%");
 }

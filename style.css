@@ -2,6 +2,7 @@
   --clockColor: #ff6e6e;
   --bgColor: #c5e1ff;
   --timerTime: 180s;
+  --grPercent: 47.5%;
 }
 
 /*폰트 인클루드*/
@@ -105,7 +106,7 @@ body {
 }
 
 #timer {
-  background: -webkit-linear-gradient(left, var(--clockColor) 50%, #eee 50%);
+  background: -webkit-linear-gradient(left, var(--clockColor) var(--grPercent), #eee 50%);
   /* Foreground color, Background colour */
   border-radius: 100%;
   height: 300px;
@@ -118,8 +119,9 @@ body {
   animation-timing-function: linear;
   animation-play-state: paused;
   animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
 }
+
 #mask {
   border-radius: 100% 0 0 100% / 50% 0 0 50%;
   height: 100%;
@@ -353,9 +355,10 @@ input::placeholder {
 }
 
 #speech {
+  font-family: Cafe24Ohsquareair;
   position: absolute;
 
-  margin-bottom: 650px;
+  margin-bottom: 600px;
 
   visibility: visible;
 
@@ -578,6 +581,13 @@ button {
 
   #sec {
     width: 220px;
+  }
+}
+
+@media (max-width: 430px) {
+  .clockBox {
+    width: 350px;
+    height: 350px;
   }
 }
 
